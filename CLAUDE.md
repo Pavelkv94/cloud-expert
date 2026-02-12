@@ -15,15 +15,41 @@ No test suite is configured yet.
 
 ## Architecture
 
-This is a **Next.js 16 App Router** project with **React 19**, **TypeScript**, and **Tailwind CSS v4**.
+**Next.js 16 App Router** · **React 19** · **TypeScript** · **Tailwind CSS v4** · **next-intl v4**
 
-- `app/layout.tsx` — Root layout with Geist font setup (CSS variables `--font-geist-sans`, `--font-geist-mono`)
-- `app/page.tsx` — Home page (the entry point to build from)
-- `app/globals.css` — Global styles; Tailwind is imported here via PostCSS
+### Routing & i18n
 
-**Tailwind v4** is used (via `@tailwindcss/postcss`), which differs from v3: no `tailwind.config.js`, configuration lives in CSS using `@theme` directives.
+- `app/layout.tsx` — Minimal root passthrough layout (no `<html>`/`<body>` here)
+- `app/[locale]/layout.tsx` — Locale layout: Geist fonts, `NextIntlClientProvider`, `generateMetadata`
+- `app/[locale]/page.tsx` — Home page; reads env vars server-side and passes to sections
+- `app/[locale]/not-found.tsx` — 404 page
+- `i18n/routing.ts` — next-intl routing config; active locales: `['ru']` (en available but disabled)
+- `i18n/request.ts` — next-intl per-request config
+- `messages/ru.json`, `messages/en.json` — translation files
 
-**ESLint** uses `eslint-config-next` with both `core-web-vitals` and `typescript` rule sets (flat config in `eslint.config.mjs`).
+### Components
+
+- `components/layout/` — `Header`, `Footer`, `CookieNotice`
+- `components/sections/` — `HeroSection`, `TabsSection`, `GpuVmsSection`, `MachineLearningSection`, `GpuBenefitsSection`, `ItSolutionsSection`, `CtaSection`, `ContactSection`, `ContactFormFormspree`
+- `components/ui/` — `Button`
+- `components/SchemaOrg.tsx` — JSON-LD structured data
+
+### Utilities
+
+- `lib/contact.ts` — `parseList()` for comma-separated env vars
+- `lib/social.tsx` — social link helpers
+
+### Key dependencies
+
+- `next-intl ^4` — i18n
+- `@formspree/react ^3` — contact form (`FORMSPREE_FORM_ID` is server-only, read in `[locale]/page.tsx`)
+- `lucide-react` — icons
+
+### Config
+
+- **Tailwind v4**: no `tailwind.config.js`; configuration lives in `app/globals.css` via `@theme` directives
+- **Path alias**: `@/*` maps to project root
+- **ESLint**: flat config in `eslint.config.mjs`, uses `eslint-config-next` (`core-web-vitals` + `typescript`)
 
 # Claude Rules
 
