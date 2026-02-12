@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 type ButtonVariant = 'primary' | 'outline' | 'white';
@@ -41,6 +43,20 @@ export default function Button({
     if (external) {
       return (
         <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    }
+    if (href.startsWith('#')) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          onClick={(e) => {
+            e.preventDefault();
+            document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           {children}
         </a>
       );
