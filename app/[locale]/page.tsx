@@ -22,6 +22,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   const formId = process.env.FORMSPREE_FORM_ID ?? '';
+  console.log('[DEBUG] FORMSPREE_FORM_ID:', formId || '(empty)');
   const consultationEmails = parseList(process.env.NEXT_PUBLIC_CONSULTATION_EMAILS);
   const consultationPhones = parseList(process.env.NEXT_PUBLIC_CONSULTATION_PHONES);
   const supportEmails = parseList(process.env.NEXT_PUBLIC_SUPPORT_EMAILS);
