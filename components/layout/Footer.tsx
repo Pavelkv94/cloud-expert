@@ -3,6 +3,8 @@ import Link from 'next/link';
 
 export default async function Footer() {
   const t = await getTranslations('footer');
+  const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Cloud Expert';
+  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-slate-900 text-gray-400">
@@ -11,9 +13,9 @@ export default async function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-sm tracking-tight">CE</span>
+              <span className="text-white font-bold text-sm tracking-tight">logo</span>
             </div>
-            <span className="font-bold text-xl text-white tracking-tight">Cloud Expert</span>
+            <span className="font-bold text-xl text-white tracking-tight">{companyName}</span>
           </div>
 
           {/* Links */}
@@ -27,7 +29,7 @@ export default async function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-gray-500">{t('copyright')}</p>
+          <p className="text-sm text-gray-500">© {year} {companyName}. {t('copyrightSuffix')}</p>
         </div>
       </div>
     </footer>

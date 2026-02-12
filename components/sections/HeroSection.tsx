@@ -4,6 +4,7 @@ import Button from '@/components/ui/Button';
 
 export default async function HeroSection() {
   const t = await getTranslations('hero');
+  const docsUrl = process.env.NEXT_PUBLIC_DOCS_URL;
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-white via-blue-50/40 to-slate-50 flex items-start">
@@ -21,10 +22,20 @@ export default async function HeroSection() {
             <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
               {t('description')}
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap gap-4">
               <Button href="#contact" variant="primary" className="text-base px-8 py-3.5">
                 {t('cta')}
               </Button>
+              {docsUrl && (
+                <Button
+                  href={docsUrl}
+                  variant="outline"
+                  className="text-base px-8 py-3.5"
+                  external
+                >
+                  {t('documentation')}
+                </Button>
+              )}
             </div>
           </div>
 

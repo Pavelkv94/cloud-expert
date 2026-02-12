@@ -9,6 +9,15 @@ export default async function ItSolutionsSection() {
   const t = await getTranslations('itSolutions');
   const stats = t.raw('stats') as StatItem[];
 
+  const clientsCount = process.env.NEXT_PUBLIC_CLIENTS_COUNT;
+  const networkSpeed = process.env.NEXT_PUBLIC_NETWORK_SPEED;
+
+  const resolvedStats = stats.map((stat, idx) => {
+    if (idx === 1 && clientsCount) return { ...stat, value: `${clientsCount}+` };
+    if (idx === 3 && networkSpeed) return { ...stat, value: `${networkSpeed} Гбит/с` };
+    return stat;
+  });
+
   return (
     <section className="py-20 bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +30,7 @@ export default async function ItSolutionsSection() {
           </div>
 
           <div className="grid grid-cols-2 gap-5">
-            {stats.map((stat, idx) => (
+            {resolvedStats.map((stat, idx) => (
               <div
                 key={idx}
                 className="text-center p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 hover:border-blue-500/40 transition-colors duration-200"

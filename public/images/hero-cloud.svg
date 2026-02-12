@@ -40,7 +40,7 @@
     <path d="M 185 232 C 185 210, 202 194, 224 194 C 228 172, 247 156, 272 156 C 287 140, 308 133, 330 138 C 350 122, 376 124, 390 144 C 412 144, 428 160, 428 180 C 444 184, 455 198, 455 215 C 455 235, 439 248, 420 248 L 208 248 C 194 248, 185 241, 185 232 Z"
       fill="url(#cloudGrad)" stroke="url(#cloudStroke)" stroke-width="1.5"/>
   </g>
-  <text x="320" y="210" text-anchor="middle" fill="#2563eb" font-size="11" font-family="system-ui,sans-serif" font-weight="600" opacity="0.9">CLOUD EXPERT</text>
+  <text x="320" y="210" text-anchor="middle" fill="#2563eb" font-size="11" font-family="system-ui,sans-serif" font-weight="600" opacity="0.9">CLOUD PLATFORM</text>
 
   <!-- Server node bottom-left -->
   <g transform="translate(62,348)">

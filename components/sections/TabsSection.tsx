@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Server, Wrench, Network, HardDrive, Headphones } from 'lucide-react';
+import { Server, Wrench, Network, HardDrive, Headphones, Building2 } from 'lucide-react';
 
 const TAB_ICONS = {
   compute: Server,
@@ -10,10 +10,11 @@ const TAB_ICONS = {
   network: Network,
   storage: HardDrive,
   support: Headphones,
+  infrastructure: Building2,
 } as const;
 
 type TabKey = keyof typeof TAB_ICONS;
-const TAB_KEYS: TabKey[] = ['compute', 'tools', 'network', 'storage', 'support'];
+const TAB_KEYS: TabKey[] = ['compute', 'tools', 'network', 'storage', 'infrastructure', 'support'];
 
 interface ServiceItem {
   title: string;

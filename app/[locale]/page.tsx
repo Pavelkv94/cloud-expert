@@ -11,6 +11,7 @@ import ItSolutionsSection from '@/components/sections/ItSolutionsSection';
 import CtaSection from '@/components/sections/CtaSection';
 import ContactSection from '@/components/sections/ContactSection';
 import SchemaOrg from '@/components/SchemaOrg';
+import { parseList } from '@/lib/contact';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -19,6 +20,13 @@ type Props = {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const formId = process.env.FORMSPREE_FORM_ID ?? '';
+  const consultationEmails = parseList(process.env.NEXT_PUBLIC_CONSULTATION_EMAILS);
+  const consultationPhones = parseList(process.env.NEXT_PUBLIC_CONSULTATION_PHONES);
+  const supportEmails = parseList(process.env.NEXT_PUBLIC_SUPPORT_EMAILS);
+  const supportPhones = parseList(process.env.NEXT_PUBLIC_SUPPORT_PHONES);
+  const socialLinks = parseList(process.env.NEXT_PUBLIC_SOCIAL_LINKS);
 
   return (
     <>
@@ -32,7 +40,14 @@ export default async function HomePage({ params }: Props) {
         <GpuBenefitsSection />
         <ItSolutionsSection />
         <CtaSection />
-        <ContactSection />
+        <ContactSection
+          formId={formId}
+          consultationEmails={consultationEmails}
+          consultationPhones={consultationPhones}
+          supportEmails={supportEmails}
+          supportPhones={supportPhones}
+          socialLinks={socialLinks}
+        />
       </main>
       <Footer />
       <CookieNotice />

@@ -11,7 +11,8 @@
     "title": "Next Generation Cloud Platform",
     "subtitle": "Infrastructure Without Limits",
     "description": "Scalable cloud resources for your business — from virtual machines to GPU clusters for artificial intelligence workloads.",
-    "cta": "Get Started"
+    "cta": "Get Started",
+    "documentation": "Documentation"
   },
   "tabs": {
     "heading": "Full Spectrum of Cloud Services",
@@ -60,6 +61,15 @@
           { "title": "Dedicated Account Manager", "description": "A dedicated manager for enterprise clients and project guidance." },
           { "title": "Knowledge Base", "description": "Extensive documentation, guides, and ready-made architectural solutions." },
           { "title": "SLA 99.99%", "description": "Guaranteed availability level with financial accountability." }
+        ]
+      },
+      "infrastructure": {
+        "label": "Infrastructure",
+        "services": [
+          { "title": "Data Center Type", "description": "Tier III data center with N+1 redundancy, fault-tolerant architecture, and 24/7 monitoring of all engineering systems." },
+          { "title": "Power", "description": "Two independent power feeds, industrial-grade UPS, and diesel generators for uninterrupted operation even during power grid failures." },
+          { "title": "Internet Channels", "description": "Multihoming with multiple independent backbone carriers and automatic traffic redistribution." },
+          { "title": "Hardware SLA", "description": "Guaranteed hardware replacement within 1 hour with round-the-clock on-site engineers at the data center." }
         ]
       }
     }
@@ -143,7 +153,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2025 Cloud Expert. All rights reserved.",
+    "copyrightSuffix": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms of Service"
   },

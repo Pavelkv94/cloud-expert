@@ -10,6 +10,7 @@ type ButtonProps = {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  external?: boolean;
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -32,10 +33,18 @@ export default function Button({
   className = '',
   type = 'button',
   disabled = false,
+  external = false,
 }: ButtonProps) {
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
   if (href) {
+    if (external) {
+      return (
+        <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      );
+    }
     return (
       <Link href={href} className={classes}>
         {children}
