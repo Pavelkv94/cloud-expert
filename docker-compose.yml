@@ -14,7 +14,7 @@ services:
         - NEXT_PUBLIC_SUPPORT_PHONES=${NEXT_PUBLIC_SUPPORT_PHONES}
         - NEXT_PUBLIC_SOCIAL_LINKS=${NEXT_PUBLIC_SOCIAL_LINKS}
     ports:
-      - "3000:3000"
+      - "3009:3000"
     environment:
       - FORMSPREE_FORM_ID=${FORMSPREE_FORM_ID}
     restart: unless-stopped
