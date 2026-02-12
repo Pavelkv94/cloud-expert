@@ -7,8 +7,8 @@
 | `NEXT_PUBLIC_COMPANY_NAME` | Company name displayed on the site |
 | `NEXT_PUBLIC_HEADER_LOGIN_URL` | URL for the login button in the header |
 | `NEXT_PUBLIC_DOCS_URL` | URL for the documentation link |
-| `NEXT_PUBLIC_CLIENTS_COUNT` | Number of clients shown in IT Solutions stats |
-| `NEXT_PUBLIC_NETWORK_SPEED` | Network speed value shown in IT Solutions stats |
+| `NEXT_PUBLIC_CLIENTS_COUNT` | Number of clients shown in IT Solutions stats(number value) |
+| `NEXT_PUBLIC_NETWORK_SPEED` | Network speed value shown in IT Solutions stats in Gbit/s(number value) |
 | `NEXT_PUBLIC_CONSULTATION_EMAILS` | Comma-separated Email(s) for connection consultation contact block |
 | `NEXT_PUBLIC_CONSULTATION_PHONES` | Comma-separated Phone(s) for connection consultation contact block |
 | `NEXT_PUBLIC_SUPPORT_EMAILS` | Comma-separated Email(s) for technical support contact block |
