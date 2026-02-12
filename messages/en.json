@@ -147,6 +147,12 @@
     "privacyPolicy": "Privacy Policy",
     "terms": "Terms of Service"
   },
+  "notFound": {
+    "code": "404",
+    "heading": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "back": "Back to Home"
+  },
   "cookie": {
     "text": "We use cookies, and your personal data may be processed through our website. The use of cookies ensures the effective operation of the resource and improves user interaction.",
     "accept": "Accept",
