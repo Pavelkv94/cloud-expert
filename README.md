@@ -26,6 +26,10 @@ If these env vars are not defined, the corresponding UI elements will not displa
 - `NEXT_PUBLIC_SUPPORT_PHONES`
 - `NEXT_PUBLIC_SOCIAL_LINKS`
 
+## Logo
+
+Place a `logo.png` file in `public/logo/` to use a custom logo. If not present, the default logo (`public/logo/logo.default.png`) is used automatically.
+
 ## Development
 
 Copy `env.local.example` to `.env.local` and fill in the values.

@@ -3,6 +3,7 @@ import Button from '@/components/ui/Button';
 
 export default async function CtaSection() {
   const t = await getTranslations('cta');
+  const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME ?? 'Cloud Expert';
 
   return (
     <section className="relative min-h-[50vh] bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 flex items-center overflow-hidden">
@@ -15,7 +16,7 @@ export default async function CtaSection() {
           {t('heading')}
         </h2>
         <p className="text-blue-100 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          {t('description')}
+          {t('description', { companyName })}
         </p>
         <Button href="#contact" variant="white" className="text-base px-10 py-3.5">
           {t('button')}

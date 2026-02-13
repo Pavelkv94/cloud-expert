@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Cloud Expert — Next Generation Cloud Services",
-    "description": "Cloud Expert — a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
+    "title": "{companyName} — Next Generation Cloud Services",
+    "description": "{companyName} — a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
   },
   "header": {
     "login": "Log In",
@@ -122,7 +122,7 @@
   },
   "cta": {
     "heading": "Achieve Your Goals Together With Us",
-    "description": "Join hundreds of companies that already trust Cloud Expert with their IT infrastructure. Start your free trial today.",
+    "description": "Join hundreds of companies that already trust {companyName} with their IT infrastructure. Start your free trial today.",
     "button": "Contact Us"
   },
   "contact": {
