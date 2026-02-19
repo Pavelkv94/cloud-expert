@@ -107,11 +107,11 @@ function BasicContactForm() {
           <span className="text-xs text-gray-600 leading-relaxed">
             {tf('consent1')}{' '}
             <a href="/docs/privacy-policy.pdf" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-              {tf('privacyPolicy')}
-            </a>
-            {' '}и{' '}
+              {tf('privacyPolicyLink')}
+            </a>{' '}
+            {tf('consent1And')}{' '}
             <a href="/docs/data-processing.pdf" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-              {tf('dataProcessing')}
+              {tf('dataProcessingLink')}
             </a>.
           </span>
         </label>
@@ -123,7 +123,12 @@ function BasicContactForm() {
             onChange={(e) => setConsent2(e.target.checked)}
             className="mt-0.5 w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500 flex-shrink-0 cursor-pointer"
           />
-          <span className="text-xs text-gray-600 leading-relaxed">{tf('consent2')}</span>
+          <span className="text-xs text-gray-600 leading-relaxed">
+            {tf('consent2Prefix')}{' '}
+            <a href="/docs/data-processing.pdf" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
+              {tf('dataProcessingLink2')}
+            </a>.
+          </span>
         </label>
 
         {errors.consent && <p className="text-red-500 text-xs">{errors.consent}</p>}

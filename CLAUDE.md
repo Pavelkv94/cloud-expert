@@ -42,7 +42,7 @@ No test suite is configured yet.
 ### Key dependencies
 
 - `next-intl ^4` — i18n
-- `@formspree/react ^3` — contact form (`FORMSPREE_FORM_ID` is server-only, read in `[locale]/page.tsx`)
+- `@formspree/react ^3` — contact form (`FORMSPREE_FORM_ID` is runtime variable, read in `[locale]/page.tsx`)
 - `lucide-react` — icons
 
 ### Config

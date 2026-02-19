@@ -17,6 +17,9 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+export const dynamic = "force-dynamic";
+
+
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -27,6 +30,8 @@ export default async function HomePage({ params }: Props) {
   const supportEmails = parseList(process.env.NEXT_PUBLIC_SUPPORT_EMAILS);
   const supportPhones = parseList(process.env.NEXT_PUBLIC_SUPPORT_PHONES);
   const socialLinks = parseList(process.env.NEXT_PUBLIC_SOCIAL_LINKS);
+
+  const hasGa = Boolean(process.env.GA_DATASTREAM_ID);
 
   return (
     <>
@@ -50,7 +55,7 @@ export default async function HomePage({ params }: Props) {
         />
       </main>
       <Footer />
-      <CookieNotice />
+      {hasGa && <CookieNotice />}
     </>
   );
 }
