@@ -134,7 +134,7 @@ function BasicContactForm() {
         {errors.consent && <p className="text-red-500 text-xs">{errors.consent}</p>}
       </div>
 
-      <Button type="submit" variant="primary" className="w-full justify-center">
+      <Button type="submit" variant="primary" className="w-full justify-center" disabled={!consent1 || !consent2}>
         {tf('submit')}
       </Button>
     </form>

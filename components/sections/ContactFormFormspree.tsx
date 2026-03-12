@@ -124,7 +124,7 @@ export default function ContactFormFormspree({ formId }: { formId: string }) {
         type="submit"
         variant="primary"
         className="w-full justify-center"
-        disabled={state.submitting}
+        disabled={state.submitting || !consent1 || !consent2}
       >
         {state.submitting ? '...' : tf('submit')}
       </Button>

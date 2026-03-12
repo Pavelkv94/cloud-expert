@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "{companyName} — Next Generation Cloud Services",
-    "description": "{companyName} — a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
+    "title": "{companyName} - Next Generation Cloud Services",
+    "description": "{companyName} - a reliable cloud platform for business. Virtual servers, GPU computing, secure storage, and 24/7 support."
   },
   "header": {
     "login": "Log In",
@@ -32,7 +32,10 @@
         "services": [
           { "title": "Managed Databases", "description": "PostgreSQL, MySQL, MongoDB with automatic backups and high availability." },
           { "title": "CI/CD Platform", "description": "Build and deployment automation with GitLab and GitHub integration." },
-          { "title": "Monitoring", "description": "Grafana and Prometheus — full observability for your infrastructure." },
+          {
+            "title": "Monitoring",
+            "description": "Grafana and Prometheus - full observability for your infrastructure."
+          },
           { "title": "Serverless", "description": "Run functions without managing servers, pay only for actual usage." }
         ]
       },
@@ -57,7 +60,10 @@
       "support": {
         "label": "Support",
         "services": [
-          { "title": "24/7 Technical Support", "description": "Our engineering team is always ready to help — response within 15 minutes." },
+          {
+            "title": "24/7 Technical Support",
+            "description": "Our engineering team is always ready to help - response within 15 minutes."
+          },
           { "title": "Dedicated Account Manager", "description": "A dedicated manager for enterprise clients and project guidance." },
           { "title": "Knowledge Base", "description": "Extensive documentation, guides, and ready-made architectural solutions." },
           { "title": "SLA 99.99%", "description": "Guaranteed availability level with financial accountability." }
@@ -98,25 +104,59 @@
   },
   "gpuBenefits": {
     "heading": "Cloud Platform Benefits",
-    "description": "Focus on your business — let the cloud handle the infrastructure",
+    "description": "Focus on your business - let the cloud handle the infrastructure",
     "items": [
-      { "icon": "Zap", "title": "Maximum Performance", "description": "Powerful infrastructure that keeps your business running at full speed, even under peak load." },
-      { "icon": "Scale", "title": "Flexible Scaling", "description": "Resources on demand: scale in minutes and pay only for what you need." },
-      { "icon": "DollarSign", "title": "Cost Savings", "description": "Eliminate expensive hardware — pay only for what you actually use." },
-      { "icon": "Clock", "title": "Fast Start", "description": "Deploy infrastructure in minutes — no lengthy procurement, approvals, or waiting." },
+      {
+        "icon": "Zap",
+        "title": "Maximum Performance",
+        "description": "Powerful infrastructure that keeps your business running at full speed, even under peak load."
+      },
+      {
+        "icon": "Scale",
+        "title": "Flexible Scaling",
+        "description": "Resources on demand: scale in minutes and pay only for what you need."
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Cost Savings",
+        "description": "Eliminate expensive hardware - pay only for what you actually use."
+      },
+      {
+        "icon": "Clock",
+        "title": "Fast Start",
+        "description": "Deploy infrastructure in minutes - no lengthy procurement, approvals, or waiting."
+      },
       { "icon": "Shield", "title": "Reliability & Security", "description": "Isolated environment, data encryption, and compliance with security standards." },
-      { "icon": "Database", "title": "Flexible Storage", "description": "Object, block, and file storage in one cloud — scale capacity without service interruptions." },
-      { "icon": "LayoutDashboard", "title": "Self-Service Portal", "description": "Full infrastructure control in your browser — deploy and manage resources independently, without an IT department." },
-      { "icon": "BarChart3", "title": "Detailed Analytics", "description": "Real-time monitoring of costs, resources, and performance across your infrastructure." }
+      {
+        "icon": "Database",
+        "title": "Flexible Storage",
+        "description": "Object, block, and file storage in one cloud - scale capacity without service interruptions."
+      },
+      {
+        "icon": "LayoutDashboard",
+        "title": "Self-Service Portal",
+        "description": "Full infrastructure control in your browser - deploy and manage resources independently, without an IT department."
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Detailed Analytics",
+        "description": "Real-time monitoring of costs, resources, and performance across your infrastructure."
+      }
     ]
   },
   "itSolutions": {
     "heading": "Modern IT Solutions for Your Business",
-    "description": "We provide a full spectrum of cloud services that allow your company to focus on business growth while we take care of infrastructure management. From startups to enterprises — our platform is ready for any challenge.",
+    "description": "We provide a full spectrum of cloud services that allow your company to focus on business growth while we take care of infrastructure management. From startups to enterprises - our platform is ready for any challenge.",
     "stats": [
+      {
+        "value": "24/7",
+        "label": "Support"
+      },
       { "value": "99.99%", "label": "Uptime SLA" },
-      { "value": "500+", "label": "Clients" },
-      { "value": "24/7", "label": "Support" },
+      {
+        "value": "500+",
+        "label": "Clients"
+      },
       { "value": "10 Gbps", "label": "Network" }
     ]
   },
@@ -159,7 +199,12 @@
     "pravilaIspolzovaniya": "Website Usage Policy",
     "cookiePolicy": "Cookie Policy",
     "dataProcessing": "Personal Data Processing Notice",
-    "privacyPolicy": "Personal Data Processing Policy"
+    "privacyPolicy": "Personal Data Processing Policy",
+    "serviceLevelAgreement": "Service Level Agreement",
+    "paymentOfServices": "Payment of Services",
+    "priceList": "Price List",
+    "publicAgreement": "Public Agreement",
+    "positionOfPublicAgreement": "Position of Public Agreement"
   },
   "notFound": {
     "code": "404",
